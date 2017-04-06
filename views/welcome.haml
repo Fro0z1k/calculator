@@ -1,0 +1,30 @@
+%p More detailed information can be obtained at a personal meeting with a credit expert.
+.content
+  %h2 You can calculate your credit
+  %h3
+    Credit information:
+  %form{action: '/processing', method: 'POST'}
+    .amoung
+      Credit rate (%):
+      %input.rate-input{name: 'calc[credit_rate]', placeholder: '0.00'}
+      %p Attention: The data is entered through the point!
+    .amoung
+      Amount of credit
+      %input.amoung-input{name: 'calc[credit_amount]', placeholder: '12000'}
+    .amoung
+      Method of loan repayment:
+    .radio-button
+      %input{name: "calc[calc_method]", type: "radio", value: 'standart', checked: true}
+        Standard
+    .radio-button
+      %input{name: "calc[calc_method]", type: "radio", value: 'annuity'}
+        Annuity (in equal parts)
+    .amoung
+      Loan term (in months):
+      %input.amoung-input{name: 'calc[credit_term]', placeholder: '12'}
+    .place-button
+      %button.sabmit-button
+        Submit
+.sidebar
+  %a{:href => "/"}
+    %img{:alt => "", :src => "/images/download.jpeg"}/

@@ -1,0 +1,22 @@
+%h3 Result:
+%table
+  %thead
+    %tr 
+      %th Months number
+      %th Loan Repayment
+      %th Repayment %
+      %th General contribution
+      %th Loan balance
+  %tbody
+    - @result.months.each do |result|
+      %tr
+        %td
+          = result.num.to_i
+        %td
+          = result.credit_body.round(2)
+        %td
+          = result.percent.round(2)
+        %td
+          = result.total.round(2)
+        %td
+          = result.credit_left.round(2)
