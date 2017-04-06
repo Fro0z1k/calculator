@@ -1,6 +1,3 @@
-# Load path and gems/bundler
-set :root, File.dirname(__FILE__)
-
 require "bundler"
 Bundler.require
 

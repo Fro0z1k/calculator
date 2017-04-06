@@ -6,6 +6,8 @@ require './services/calculator/base_calculator'
 require './services/calculator/annuity_calculator'
 require './services/calculator/standart_calculator'
 
+set :root, File.dirname(__FILE__)
+
 get "/" do
   haml :welcome
 end
